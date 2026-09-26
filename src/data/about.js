@@ -7,8 +7,10 @@
 export const about = {
   eyebrow: 'About me',
   headline: 'Web Developer · IT Support',
-  portrait: '',
+  portrait: '/images/about_me.jpg',
   portraitAlt: 'Portrait of Alex A. Buenaflor',
+  // Which part stays visible when cropped: 'x% y%' (lower y = keep more of the top)
+  portraitPosition: '50% 30%',
   bio: [
     'I\'m a Computer Science graduate with experience in government administrative support, IT troubleshooting, document management, and web system development.',
     'Organized and adaptable, I bring practical experience supporting office operations, official documentation, meetings, trainings, and government programs.',

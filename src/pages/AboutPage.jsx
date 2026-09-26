@@ -32,7 +32,7 @@ export default function AboutPage() {
         <motion.div className="about__media-wrap" {...fadeIn(0.05)}>
           <span className="about__bar" aria-hidden="true" />
           <div className="about__media">
-            <Media src={about.portrait} alt={about.portraitAlt} label="Your photo" hint="4:5 · min 1200px tall" icon="person" />
+            <Media src={about.portrait} alt={about.portraitAlt} label="Your photo" hint="4:5 · min 1200px tall" icon="person" position={about.portraitPosition} />
           </div>
         </motion.div>
 
