@@ -1,0 +1,16 @@
+node_modules
+dist
+.vercel
+.DS_Store
+*.log
+
+# Full-size source images (not deployed)
+originals
+
+.vercel
+.env*
+
+# Local AI-assistant skill packs (not part of the site)
+.agents
+.aider-desk
+skills-lock.json
