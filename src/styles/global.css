@@ -1465,6 +1465,86 @@ address {
   align-self: flex-start;
 }
 
+.contact__form-wrap {
+  min-width: 0;
+}
+
+.field.has-error input,
+.field.has-error textarea {
+  border-color: #f87171;
+}
+.field__error {
+  font-size: 0.82rem;
+  color: #f87171;
+}
+
+.form-alert {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #fecaca;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+}
+.form-alert a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Honeypot: off-screen, not display:none (some bots skip hidden fields) */
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact__sent {
+  align-items: flex-start;
+  gap: 14px;
+}
+.contact__sent h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+.contact__sent strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.contact__sent-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-ink);
+  background: var(--accent);
+}
+.contact__again {
+  margin-top: 8px;
+  padding: 12px 22px;
+}
+
 /* ═══════════════════════════════════════════════════════════
    Footer
    ═══════════════════════════════════════════════════════════ */

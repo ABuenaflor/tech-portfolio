@@ -27,8 +27,19 @@ Recommended sizes: portrait 4:5 (≥1200px tall), project screenshots 16:10 (≥
 
 ## Contact form
 
-The form currently opens the visitor's email app with the message pre-filled (`mailto:`).
-To receive submissions directly, swap `submit()` in `src/pages/ContactPage.jsx` for Formspree, EmailJS, or a Vercel serverless function.
+The form on `/contact` posts to a Vercel serverless function ([api/contact.js](api/contact.js)), which emails the request to you through Gmail. The visitor is set as Reply-To, so you can answer straight from your inbox.
+
+Set these in **Vercel → Project → Settings → Environment Variables** (Production), then redeploy:
+
+| Variable | Value |
+| --- | --- |
+| `GMAIL_USER` | your Gmail address |
+| `GMAIL_APP_PASSWORD` | a Gmail App Password: Google Account → Security → 2-Step Verification (must be on) → App passwords |
+| `CONTACT_TO` | optional, deliver to a different address |
+
+Service options and length limits live in [src/data/contact.js](src/data/contact.js) (shared by the form and the function). Spam protection: hidden honeypot field, a minimum fill time, and a per-IP rate limit.
+
+`npm run dev` doesn't run the `/api` function; use `npx vercel dev` to test the form locally.
 
 ## Deploy to Vercel
 
