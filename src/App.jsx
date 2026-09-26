@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import DevPage from './pages/DevPage'
 import PhotoPage from './pages/PhotoPage'
 import ContactPage from './pages/ContactPage'
+import AboutPage from './pages/AboutPage'
 
 // Each side of the portfolio gets its own palette (see global.css).
 const applyTheme = (pathname) => {
@@ -37,6 +38,7 @@ export default function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<DevPage />} />
             <Route path="/photography" element={<PhotoPage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

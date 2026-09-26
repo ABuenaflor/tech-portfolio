@@ -1110,6 +1110,213 @@ address {
 /* ═══════════════════════════════════════════════════════════
    Contact
    ═══════════════════════════════════════════════════════════ */
+/* About Me ─────────────────────────────────────────────── */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: center;
+  padding-top: calc(var(--nav-h) + 56px);
+  padding-bottom: clamp(24px, 4vw, 48px);
+}
+
+/* Accent bar beside the photo, echoing the reference layout */
+.about__media-wrap {
+  position: relative;
+  padding-left: 22px;
+}
+.about__bar {
+  position: absolute;
+  left: 0;
+  top: 14%;
+  bottom: 14%;
+  width: 10px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+.about__media {
+  aspect-ratio: 4 / 5;
+  max-height: 68vh;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.about__media .media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.about__name {
+  font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+  margin-top: 4px;
+}
+.about__headline {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.about__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-top: 8px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.about__contact li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.about__contact svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.about__contact a:hover {
+  color: var(--accent);
+}
+
+.section--tight {
+  padding-top: 0;
+}
+
+/* Experience timeline */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.timeline__item {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 56px);
+  padding-block: 36px;
+  border-top: 1px solid var(--line);
+}
+.timeline__item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.timeline__when {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.timeline__dates {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.timeline__loc {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.timeline__role {
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  letter-spacing: -0.02em;
+}
+.timeline__org {
+  margin-top: 6px;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.timeline__points {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  color: var(--muted);
+}
+.timeline__points li {
+  position: relative;
+  padding-left: 20px;
+}
+.timeline__points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 9px;
+  height: 1.5px;
+  background: var(--accent);
+}
+
+/* Education */
+.edu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.edu__card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: clamp(24px, 3vw, 32px);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+.edu__card .timeline__role {
+  margin-top: 10px;
+}
+.edu__card .timeline__points {
+  margin-top: 14px;
+}
+.edu__note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about__media-wrap {
+    max-width: 420px;
+    width: 100%;
+  }
+  .timeline__item {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* Contact ─────────────────────────────────────────────── */
 .contact {
   min-height: 100svh;
   display: grid;

@@ -7,6 +7,7 @@ import { ease } from '../lib/motion'
 const links = [
   { to: '/', label: 'Web Development' },
   { to: '/photography', label: 'Photography' },
+  { to: '/about', label: 'About Me' },
   { to: '/contact', label: "Let's Talk Business" },
 ]
 
