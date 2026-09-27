@@ -28,7 +28,7 @@ export const projects = [
     tech: ['Php', 'Tailwind CSS', 'Mysql'],
     image: '/images/projects/02.png',
     hue: 168,
-    live: '#',
+    live: 'https://dwcl-hrs.vercel.app',
     code: '#',
   },
   // {

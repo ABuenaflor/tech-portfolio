@@ -54,7 +54,7 @@ export default function ProjectCard({ project, index }) {
           <div className="project__links">
             {live && (
               <a href={live} target="_blank" rel="noreferrer" className="link-arrow">
-                Live site <ArrowUpRight size={16} />
+                Live Demo <ArrowUpRight size={16} />
               </a>
             )}
             {code && (
